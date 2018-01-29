@@ -90,6 +90,11 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default
 
+# F-Droid
+PRODUCT_PACKAGES += \
+    FDroidPrivilegedExtension \
+    FDroid
+
 # camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
