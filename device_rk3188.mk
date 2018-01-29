@@ -14,10 +14,8 @@ endif
 # Files needed for boot and recovery image
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/default.prop:root/default.prop \
-    $(LOCAL_PATH)/ramdisk/charger:root/charger \
     $(LOCAL_PATH)/ramdisk/drmboot.ko:root/drmboot.ko \
     $(LOCAL_PATH)/ramdisk/fstab.rk30board:root/fstab.rk30board \
-    $(LOCAL_PATH)/ramdisk/init.rc:root/init.rc \
     $(LOCAL_PATH)/ramdisk/init.rk30board.environment.rc:root/init.rk30board.environment.rc \
     $(LOCAL_PATH)/ramdisk/init.rk30board.rc:root/init.rk30board.rc \
     $(LOCAL_PATH)/ramdisk/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
@@ -25,14 +23,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/rk30xxnand_ko.ko.3.0.8+:root/rk30xxnand_ko.ko.3.0.8+ \
     $(LOCAL_PATH)/ramdisk/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+ \
     $(LOCAL_PATH)/ramdisk/ueventd.rk30board.rc:root/ueventd.rk30board.rc \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_0.png:root/res/images/charger/battery_0.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_1.png:root/res/images/charger/battery_1.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_2.png:root/res/images/charger/battery_2.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_3.png:root/res/images/charger/battery_3.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_4.png:root/res/images/charger/battery_4.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_5.png:root/res/images/charger/battery_5.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_charge.png:root/res/images/charger/battery_charge.png \
-    $(LOCAL_PATH)/ramdisk/res/images/charger/battery_fail.png:root/res/images/charger/battery_fail.png \
     $(LOCAL_PATH)/recovery/init.recovery.rk30board.rc:root/init.recovery.rk30board.rc 
 
 # Modified shared objects
@@ -82,6 +72,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+# charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # wifi packages
 PRODUCT_PACKAGES += \
