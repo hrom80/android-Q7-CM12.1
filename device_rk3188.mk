@@ -1,8 +1,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product-if-exists, vendor/haier/rk3188/rk3188-vendor.mk)
+$(call inherit-product-if-exists, vendor/rockchip/rk3188/rk3188-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/haier/rk3188/overlay
+DEVICE_PACKAGE_OVERLAYS += device/rockchip/rk3188/overlay
 
 LOCAL_PATH := device/haier/rk3188
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -52,11 +52,11 @@ PRODUCT_COPY_FILES += \
 
 # bt config files
 PRODUCT_COPY_FILES += \
-    device/haier/rk3188/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    device/rockchip/rk3188/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 # camera HAL
 PRODUCT_COPY_FILES += \
-    device/haier/rk3188/camera/camera.rk30board.so:system/lib/hw/camera.rk30board.so
+    device/rockchip/rk3188/camera/camera.rk30board.so:system/lib/hw/camera.rk30board.so
 
 # lights HAL
 PRODUCT_PACKAGES += \
@@ -64,8 +64,8 @@ PRODUCT_PACKAGES += \
 
 # media files
 PRODUCT_COPY_FILES += \
-    device/haier/rk3188/media/media_codecs.xml:system/etc/media_codecs.xml \
-    device/haier/rk3188/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/rockchip/rk3188/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/rockchip/rk3188/media/media_profiles.xml:system/etc/media_profiles.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
